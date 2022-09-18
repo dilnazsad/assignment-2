@@ -1,5 +1,11 @@
-array = [[1, 2, -3, -4], [-2, 3, -1, 5]]
+def list_sort(lst):
+    for i in range(len(lst)):
+        lst[i] = abs(lst[i])
 
-array.sort(key=lambda x: sum(map(lambda xy: abs(xy), x)), reverse=True)
+    return lst.sort(reverse=True)
 
-print(array)
+
+arr = [34, 52, 8, 96, 56, 12, 82]
+
+
+print('Numbers in descending order of their absolute value:', list_sort(arr))
